@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em breve: Novidades</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFFAF0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            background-color: #FFFAF0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: #3E6B59; /* Cor do texto */
-            font-family: Helvetica, Arial, sans-serif;
-        }
-        h1 {
-            color: #3E6B59;
-            font-family: Helvetica, Arial, sans-serif;
-            margin-top: -20px;
-        }
-        p {
-            color: #3E6B59;
-            margin-top: 10px;
-        }
-        .logo {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>FAQ - Trocadinhos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Imagem da logo -->
-        <img class="logo" src="logo.png" alt="Logo da sua empresa">
-        <!-- Título e texto -->
-        <h1>Em breve: Novidades</h1>
+
+    <!-- Carregar o Header -->
+    <div id="header"></div>
+
+    <!-- Área de conteúdo onde as páginas serão carregadas -->
+    <div id="content" class="palco">
+        <p>Carregando...</p>
     </div>
+
+    <!-- Carregar o Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Função para carregar o header e o footer
+        async function loadComponent(id, path) {
+            const response = await fetch(path);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+
+        // Função para carregar o conteúdo principal
+        async function loadContent(page) {
+            try {
+                const response = await fetch(page);
+                const content = await response.text();
+                document.getElementById("content").innerHTML = content;
+            } catch (error) {
+                document.getElementById("content").innerHTML = "<p>Erro ao carregar o conteúdo. Tente novamente.</p>";
+            }
+        }
+
+        // Carrega a página inicial por padrão
+        loadContent('home.html');
+    </script>
+
 </body>
 </html>
