@@ -1,0 +1,158 @@
+/* Variáveis para facilitar a edição */
+:root {
+    --primary-bg-color: #FFFAF0;
+    --primary-text-color: #23221F;
+    --banner-bg-color: #3D9EBC;
+    --banner-text-color: #E8ED80;
+    --section-bg-color: #F1EBDD;
+    --font-family: 'Helvetica', sans-serif;
+    --banner-height: 7cm;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 768px;
+    height: auto;
+}
+
+/* Menu */
+.menu {
+    background-color: #FFFAF0;
+    font-size: 14px;
+    color: #23221F;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFAF0;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Palco */
+.palco {
+    padding: 40px;
+    background-color: var(--primary-bg-color);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Faixa promocional */
+.faixa-azul {
+    background-color: #3D9EBC;
+    color: #E8ED80;
+    height: 5cm;
+    padding: 20px;
+    text-align: center;
+}
+
+.faixa-azul .texto-menor {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.faixa-azul .texto-maior {
+    font-size: 3.25rem;
+    font-weight: 700;
+    margin: 30px 0 20px 0;
+}
+
+.faixa-azul .texto-maior a{
+    color: #E8ED80;
+}
+
+/* Nova seção com imagem */
+.imagem-central {
+    background-color: var(--section-bg-color);
+    text-align: center;
+}
+
+.imagem-central img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: #FFFAF0;
+    color: #23221F;
+    padding: 60px 20px;
+    border-top: 1px solid #e7e5e1;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer div {
+    width: 22%;
+    margin-bottom: 20px;
+}
+
+footer img {
+    max-width: 200px;
+    margin: 10px 0;
+}
+
+footer a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.875rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .faixa {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    footer div {
+        width: 100%;
+    }
+}
