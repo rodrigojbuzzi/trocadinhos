@@ -26,7 +26,7 @@ body {
 /* Cabeçalho */
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 5px;
 }
 
 .logo {
@@ -45,14 +45,14 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #FFFAF0;
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 14px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 nav a {
@@ -62,12 +62,120 @@ nav a {
     text-transform: uppercase;
 }
 
-/* Palco */
+/* Estilo do palco de conteúdo */
 .palco {
-    padding: 40px;
+    padding: 30px;
     background-color: var(--primary-bg-color);
     text-align: center;
+    /* Mantém o título centralizado */
     font-size: 1.2rem;
+}
+
+/* Títulos das seções */
+.palco h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-text-color);
+}
+
+/* Conteúdo geral */
+.palco .conteudo {
+    text-align: left;
+    /* Conteúdo alinhado à esquerda */
+    margin: 0 auto;
+    max-width: 800px;
+    /* Limita a largura do texto */
+    line-height: 1.8;
+}
+
+/* Destaques no texto */
+.palco .conteudo strong {
+    color: #3D9EBC;
+    /* Destaque em azul */
+    font-weight: bold;
+}
+
+.palco .conteudo em {
+    font-style: italic;
+    color: var(--primary-text-color);
+}
+
+.palco .conteudo u {
+    text-decoration: underline dotted;
+}
+
+.palco h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-text-color);
+}
+
+.palco ol {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.palco ol li {
+    margin-bottom: 15px;
+}
+
+.palco .link {
+    color: #3D9EBC;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.palco .link:hover {
+    text-decoration: none;
+}
+
+/* Imagens */
+.palco .imagem-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.palco .imagem-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.conteudo h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: var(--banner-bg-color);
+    text-align: left;
+}
+
+.conteudo p,
+.conteudo ul {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.conteudo ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.imagem-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.imagem-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 /* Faixa promocional */
@@ -91,7 +199,7 @@ nav a {
     margin: 30px 0 20px 0;
 }
 
-.faixa-azul .texto-maior a{
+.faixa-azul .texto-maior a {
     color: #E8ED80;
 }
 
@@ -134,6 +242,7 @@ footer a {
     text-decoration: none;
     list-style: none;
     line-height: 1.875rem;
+    font-size: 14px;
 }
 
 footer a:hover {
