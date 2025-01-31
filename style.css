@@ -68,12 +68,12 @@ nav a {
     background-color: var(--primary-bg-color);
     text-align: center;
     /* Mantém o título centralizado */
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 /* Títulos das seções */
 .palco h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 20px;
     color: var(--primary-text-color);
@@ -149,7 +149,7 @@ nav a {
 
 
 .conteudo h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 30px;
     color: var(--banner-bg-color);
     text-align: left;
